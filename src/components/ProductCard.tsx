@@ -1,23 +1,33 @@
-import {Card, ListGroup} from "react-bootstrap";
+import { Card, Col, Row } from 'react-bootstrap';
 
-export const ProductCard = ({imageSrc, title}) => {
-  return  <Card className="w-100">
+export const ProductCard = ({
+  imageSrc,
+  title,
+  display,
+  camera,
+  ram,
+  sim,
+  price,
+}) => {
+  return (
+    <Card className="w-100">
       <Card.Img variant="top" src={imageSrc} />
       <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-          </Card.Text>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{`${display} | ${camera} | ${ram} | ${sim}`}</Card.Text>
       </Card.Body>
-      <ListGroup className="list-group-flush">
-          <ListGroup.Item>Cras justo odio</ListGroup.Item>
-          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-      </ListGroup>
-      <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body>
-  </Card>
-}
+      <Card.Footer>
+        <Row>
+          <Col>
+            <h5>{price}</h5>
+          </Col>
+          <Col>
+            <Card.Link href="#">Favorite</Card.Link>
+            <Card.Link href="#">Compare</Card.Link>
+            <Card.Link href="#">Cart</Card.Link>
+          </Col>
+        </Row>
+      </Card.Footer>
+    </Card>
+  );
+};

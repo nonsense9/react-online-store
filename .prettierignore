@@ -1,0 +1,6 @@
+build
+helm
+**/.git
+**/node_modules
+**/public
+README.md
