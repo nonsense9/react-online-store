@@ -49,9 +49,10 @@ const filters: Filters[] = [
 
 export const Filters = ({ setProducts }) => {
   const [selectedCategory, setCategory] = useState<any>(null)
+
+  //TODO Refactor this handler so user could filter by more then 1 category and more then 1 option from category
   const handleFilters = ({ text }, category) => {
     setCategory(category)
-
     const next = [...data];
     let res: any = [];
 
