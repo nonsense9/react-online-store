@@ -1,19 +1,21 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import { Header } from './Header';
 import { Footer } from './Footer/Footer.tsx';
-import { products } from '../../data.json';
+import { data } from '../../data.json';
 import { Breadcrumbs } from './Breadcrumbs.tsx';
 import { Filters } from './Filters.tsx';
 import { ProductCard } from './ProductCard.tsx';
 import { Sale } from './Sale.tsx';
 import { Paginate } from './Paginate.tsx';
 import { SortBy } from './SortBy.tsx';
+import { useState } from 'react';
 
 export const Layout = () => {
+  const [products, setProducts] = useState([...data]);
   return (
     <>
       <Sale />
-      <Header />
+      <Header setProducts={setProducts} />
       <Container className="min-vh-70 p-0">
         <Breadcrumbs />
         <Filters />
@@ -27,7 +29,7 @@ export const Layout = () => {
             ))}
           </Row>
         </div>
-        <Paginate />
+        <Paginate totalProductCount={products.length} />
       </Container>
       <Footer />
     </>

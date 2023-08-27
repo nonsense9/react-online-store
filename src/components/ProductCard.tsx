@@ -8,12 +8,13 @@ export const ProductCard = ({
   ram,
   sim,
   price,
+  brand,
 }) => {
   return (
     <Card className="w-100">
       <Card.Img variant="top" src={imageSrc} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title>{`${brand} ${title}`}</Card.Title>
         <Card.Text>{`${display} | ${camera} | ${ram} | ${sim}`}</Card.Text>
       </Card.Body>
       <Card.Footer>

@@ -1,8 +1,8 @@
 import { Button, Col, Pagination, Row } from 'react-bootstrap';
 
-export const Paginate = () => {
+export const Paginate = ({ totalProductCount }) => {
   return (
-    <Row className="my-3">
+    <Row className="my-4">
       <Col>
         <Pagination>
           <Pagination.First />
@@ -26,7 +26,7 @@ export const Paginate = () => {
         <Button>Load More</Button>
       </Col>
       <Col className="d-flex justify-content-end">
-        Per Page: 1-12(Total: 25)
+        Per Page: 1-12(Total: {totalProductCount})
       </Col>
     </Row>
   );

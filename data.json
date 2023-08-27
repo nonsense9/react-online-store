@@ -1,47 +1,47 @@
 {
-  "products": [
+  "data": [
     {
       "id": "0",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "1600 EUR"
     },
     {
       "id": "1",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "1600 EUR"
     },
     {
       "id": "2",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "1600 EUR"
     },
     {
       "id": "3",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
@@ -54,7 +54,7 @@
     },
     {
       "id": "4",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
@@ -67,7 +67,7 @@
     },
     {
       "id": "5",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
+      "title": "iPhone 11 Plus 256 Gb Blue",
       "brand": "Apple",
       "capacity": "256Gb",
       "color": "Blue",
@@ -80,81 +80,81 @@
     },
     {
       "id": "6",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
       "ram": "6 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
+      "imageSrc": "src/assets/images/samsung-card.png",
       "price": "600 EUR"
     },
     {
       "id": "7",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
       "ram": "6 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
+      "imageSrc": "src/assets/images/samsung-card.png",
       "price": "600 EUR"
     },
     {
       "id": "8",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
       "ram": "6 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
+      "imageSrc": "src/assets/images/samsung-card.png",
       "price": "600 EUR"
     },
     {
       "id": "9",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "imageSrc": "src/assets/images/samsung-card.png",
+      "price": "1600 EUR"
     },
     {
       "id": "10",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "imageSrc": "src/assets/images/samsung-card.png",
+      "price": "1600 EUR"
     },
     {
       "id": "11",
-      "title": "Apple iPhone 11 Plus 256 Gb Blue",
-      "brand": "Apple",
+      "title": "Galaxy 11 Plus 256 Gb Blue",
+      "brand": "Samsung",
       "capacity": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "imageSrc": "src/assets/images/samsung-card.png",
+      "price": "1600 EUR"
     }
   ]
 }

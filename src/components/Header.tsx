@@ -1,6 +1,22 @@
 import { Col, Container, Form, Nav, NavDropdown, Row } from 'react-bootstrap';
+import { data } from '../../data.json';
 
-export const Header = () => {
+export const Header = ({ setProducts }) => {
+  //TODO Add debounce function
+  const handleSearch = (event) => {
+    const next = [...data];
+    const res: any = [];
+    next.map((item) => {
+      if (
+        item.title.toLowerCase().includes(event.target.value) ||
+        item.brand.toLowerCase().includes(event.target.value)
+      ) {
+        res.push(item);
+      }
+    });
+    setProducts(res);
+  };
+
   return (
     <>
       <Container>
@@ -17,20 +33,28 @@ export const Header = () => {
             </Nav>
           </Col>
           <Col xs={5}>
-            <Form className="d-flex">
+            <Form
+              className="d-flex"
+              onSubmit={(event) => {
+                event.preventDefault();
+              }}
+            >
               <Form.Control
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                onChange={handleSearch}
               />
             </Form>
           </Col>
-          <Col xs={5}>
+          <Col xs={5} className="d-flex flex-column justify-content-center">
             <Row>
               <Col>
                 <Row>
                   <Col>
-                    <a>+3637347347373</a>
+                    <a href="tel:+49(0)75318049494" style={{ fontSize: '3vh' }}>
+                      +49 (0) 7531 8049494
+                    </a>
                   </Col>
                   <Col>
                     <a>Repair Service</a>

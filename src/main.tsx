@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Navigate } from 'react-router';
 
 import './index.scss';
 import { App } from './App.tsx';
-import { Navigate } from 'react-router';
+import 'primeicons/primeicons.css';
 
 const router = createBrowserRouter([
   {

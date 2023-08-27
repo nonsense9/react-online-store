@@ -32,46 +32,62 @@ export const Filters = () => {
       <Row className="mb-3">
         <h4>Smartphones</h4>
       </Row>
-      <Row>
-        <Row className="mb-2">
-          {splitArrayInThreePieces[0].map(({ title, items }, idx) => (
-            <Col key={idx}>
-              <NavDropdown title={title} key={idx} id={title}>
-                {items.map((item, idx) => (
-                  <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
-                    {item.text}
-                  </NavDropdown.Item>
-                ))}
-              </NavDropdown>
-            </Col>
-          ))}
-        </Row>
-        <Row className="mb-2">
-          {splitArrayInThreePieces[1].map(({ title, items }, idx) => (
-            <Col key={idx}>
-              <NavDropdown title={title} key={idx} id={title}>
-                {items.map((item, idx) => (
-                  <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
-                    {item.text}
-                  </NavDropdown.Item>
-                ))}
-              </NavDropdown>
-            </Col>
-          ))}
-        </Row>
-        <Row className="mb-2">
-          {splitArrayInThreePieces[2].map(({ title, items }, idx) => (
-            <Col key={idx}>
-              <NavDropdown title={title} key={idx} id={title}>
-                {items.map((item, idx) => (
-                  <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
-                    {item.text}
-                  </NavDropdown.Item>
-                ))}
-              </NavDropdown>
-            </Col>
-          ))}
-        </Row>
+      <Row className="mb-2">
+        {splitArrayInThreePieces[0].map(({ title, items }, idx) => (
+          <Col key={idx}>
+            <NavDropdown
+              title={title}
+              key={idx}
+              id={title}
+              style={{ borderStyle: 'groove' }}
+              className="py-2"
+            >
+              {items.map((item, idx) => (
+                <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
+                  {item.text}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Col>
+        ))}
+      </Row>
+      <Row className="mb-2">
+        {splitArrayInThreePieces[1].map(({ title, items }, idx) => (
+          <Col key={idx}>
+            <NavDropdown
+              title={title}
+              key={idx}
+              id={title}
+              style={{ borderStyle: 'groove' }}
+              className="py-2"
+            >
+              {items.map((item, idx) => (
+                <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
+                  {item.text}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Col>
+        ))}
+      </Row>
+      <Row className="mb-2">
+        {splitArrayInThreePieces[2].map(({ title, items }, idx) => (
+          <Col key={idx}>
+            <NavDropdown
+              title={title}
+              key={idx}
+              id={title}
+              style={{ borderStyle: 'groove' }}
+              className="py-2"
+            >
+              {items.map((item, idx) => (
+                <NavDropdown.Item key={idx} href={`${title}/${item.text}`}>
+                  {item.text}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Col>
+        ))}
       </Row>
       <Row>
         <Col className="d-flex justify-content-end">
