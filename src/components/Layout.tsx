@@ -18,7 +18,7 @@ export const Layout = () => {
       <Header setProducts={setProducts} />
       <Container className="min-vh-70 p-0">
         <Breadcrumbs />
-        <Filters />
+        <Filters setProducts={setProducts} />
         <SortBy />
         <div className="d-flex justify-content-center h-100">
           <Row>

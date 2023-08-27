@@ -52,7 +52,10 @@ export const Header = ({ setProducts }) => {
               <Col>
                 <Row>
                   <Col>
-                    <a href="tel:+49(0)75318049494" style={{ fontSize: '3vh' }}>
+                    <a
+                      href="tel:+49(0)75318049494"
+                      style={{ fontSize: '2.5vh' }}
+                    >
                       +49 (0) 7531 8049494
                     </a>
                   </Col>
