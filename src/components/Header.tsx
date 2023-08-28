@@ -2,7 +2,15 @@ import { Col, Container, Form, Nav, NavDropdown, Row } from 'react-bootstrap';
 import { data } from '../../data.json';
 
 export const Header = ({ setProducts }) => {
-  //TODO Add debounce function
+
+  const debounce = (callback, timeout) => {
+    let timer: any;
+    return (...args: any) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => callback(...args), timeout)
+    }
+  }
+
   const handleSearch = (event) => {
     const next = [...data];
     const res: any = [];
@@ -43,7 +51,7 @@ export const Header = ({ setProducts }) => {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-                onChange={handleSearch}
+                onChange={debounce(handleSearch, 1000)}
               />
             </Form>
           </Col>
