@@ -28,7 +28,7 @@ export const Header = ({ setProducts }) => {
   return (
     <>
       <Container>
-        <Row className="py-3">
+        <Row className="d-flex justify-content-center align-items-center py-3">
           <Col xs={2}>
             <Nav
               className="me-auto my-2 my-lg-0 d-flex justify-content-end"
@@ -59,10 +59,10 @@ export const Header = ({ setProducts }) => {
             <Row>
               <Col>
                 <Row>
-                  <Col>
+                  <Col className="d-flex align-items-center">
                     <a
                       href="tel:+49(0)75318049494"
-                      style={{ fontSize: '2.5vh' }}
+                      style={{ whiteSpace: 'nowrap' }}
                     >
                       +49 (0) 7531 8049494
                     </a>
