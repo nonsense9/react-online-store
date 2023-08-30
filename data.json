@@ -60,10 +60,10 @@
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "1800 EUR"
     },
     {
       "id": "5",
@@ -80,15 +80,15 @@
     },
     {
       "id": "6",
-      "title": "Galaxy 11 Plus 256 Gb Blue",
-      "brand": "Samsung",
+      "title": "iPhone 11 Plus 256 Gb Blue",
+      "brand": "Apple",
       "memory": "256Gb",
       "color": "Blue",
       "display": "6,1\"",
       "camera": "12MP",
-      "ram": "6 GB",
+      "ram": "16 GB",
       "sim": "Single SIM",
-      "imageSrc": "src/assets/images/samsung-card.png",
+      "imageSrc": "src/assets/images/card.png",
       "price": "600 EUR"
     },
     {
@@ -141,7 +141,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "1600 EUR"
+      "price": "1000 EUR"
     },
     {
       "id": "11",
