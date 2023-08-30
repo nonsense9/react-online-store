@@ -1,4 +1,4 @@
 interface Filters {
-  title: string;
+  label: string;
   items: { text: string; id: number }[];
 }

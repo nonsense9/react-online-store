@@ -1,17 +1,19 @@
-import { Button, Col, NavDropdown, Row } from 'react-bootstrap';
+import {Button, Col, FormLabel, NavDropdown, Row} from 'react-bootstrap';
 import { data } from '../../data.json';
-import {useEffect, useState} from "react";
+import {useState } from 'react';
+import FormCheckInput from "react-bootstrap/FormCheckInput";
 
 const filters: Filters[] = [
   {
-    title: 'Brand',
+    label: 'Brand',
     items: [
       { text: 'Apple', id: 0 },
       { text: 'Samsung', id: 1 },
+      { text: 'Nokia', id: 1 },
     ],
   },
   {
-    title: 'Price',
+    label: 'Price',
     items: [
       {
         text: '600 EUR',
@@ -21,11 +23,17 @@ const filters: Filters[] = [
         text: '1600 EUR',
         id: 1,
       },
+      {
+        text: '9600 EUR',
+        id: 2,
+      },
     ],
   },
-  { title: 'Display', items: [] },
-  { title: 'Memory', items: [] },
-  { title: 'RAM', items: [
+  { label: 'Display', items: [] },
+  { label: 'Memory', items: [] },
+  {
+    label: 'RAM',
+    items: [
       {
         text: '6 GB',
         id: 0,
@@ -34,54 +42,55 @@ const filters: Filters[] = [
         text: '16 GB',
         id: 1,
       },
-    ] },
-  { title: 'Battery', items: [] },
-  { title: 'Model', items: [] },
-  { title: 'Nr.Sim', items: [] },
-  { title: 'Refresh Rate', items: [] },
-  { title: 'Color', items: [] },
-  { title: 'Processor', items: [] },
-  { title: 'Connection', items: [] },
-  { title: 'Type of Display', items: [] },
-  { title: 'NFC', items: [] },
-  { title: 'Processor Model', items: [] },
+      {
+        text: '36 GB',
+        id: 2,
+      },
+    ],
+  },
+  { label: 'Battery', items: [] },
+  { label: 'Model', items: [] },
+  { label: 'Nr.Sim', items: [] },
+  { label: 'Refresh Rate', items: [] },
+  { label: 'Color', items: [] },
+  { label: 'Processor', items: [] },
+  { label: 'Connection', items: [] },
+  { label: 'Type of Display', items: [] },
+  { label: 'NFC', items: [] },
+  { label: 'Processor Model', items: [] },
 ];
 
 export const Filters = ({ setProducts }) => {
-  const [selectedCategory, setCategory] = useState<any>(null)
+  const [selectedCategory, setCategory] = useState<any>({
+    brand: [],
+    price: [],
+    ram: [],
+  });
 
-  //TODO Refactor this handler so user could filter by more then 1 category and more then 1 option from category
+
+  //TODO Refactor to work without bugs, right now it brokes when you select couple options in the same category
   const handleFilters = ({ text }, category) => {
-    setCategory(category)
-    const next = [...data];
-    let res: any = [];
-
-    switch (selectedCategory) {
-      case 'Brand': {
-        res = next.filter((i) => i.brand === text);
-        break;
-      }
-      case 'Price': {
-        res = next.filter((i) => i.price === text);
-        break;
-      }
-      case 'RAM': {
-        res = next.filter((i) => i.ram === text);
-        break;
-      }
-      default: {
-        res = [...data]
-      }
-    }
-    setProducts(res);
+    setCategory((prevState) => {
+      return {
+        ...prevState,
+        [category]: prevState[category].includes(text)
+          ? prevState[category].filter((i) => i !== text)
+          : [...prevState[category], text],
+      };
+    });
+    let next = [...data];
+    next = next
+      .filter((prod) => prod.brand.includes(selectedCategory.brand))
+      .filter((prod) => prod.price.includes(selectedCategory.price))
+      .filter((prod) => prod.ram.includes(selectedCategory.ram));
+    setProducts(next ?? data);
   };
 
   const resetFilters = () => {
     setCategory(null);
-    setProducts(data)
-  }
+    setProducts(data);
+  };
 
-  useEffect(() => {}, [])
   return (
     <Col>
       <Row className="mb-3">
@@ -89,22 +98,24 @@ export const Filters = ({ setProducts }) => {
       </Row>
       <Row className="mb-2">
         <div className="d-flex flex-wrap">
-          {filters.map(({ title, items }, idx) => (
+          {filters.map(({ label, items }, idx) => (
             <div key={idx} className="filters__toggle">
               <NavDropdown
-                title={title}
+                title={label}
                 key={idx}
-                id={title}
+                id={label}
                 style={{ borderStyle: 'groove' }}
                 className="py-2"
               >
                 {items.map((item, idx) => (
-                  <NavDropdown.Item
-                    key={idx}
-                    onClick={() => handleFilters(item, title)}
-                  >
-                    {item.text}
-                  </NavDropdown.Item>
+                  <div key={idx}>
+                    <FormLabel>{item.text}</FormLabel>
+                    <FormCheckInput
+                      multiple
+                      name={item.text}
+                      onClick={() => handleFilters(item, label.toLowerCase())}
+                    ></FormCheckInput>
+                  </div>
                 ))}
               </NavDropdown>
             </div>
