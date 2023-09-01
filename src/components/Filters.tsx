@@ -1,7 +1,7 @@
-import {Button, Col, FormLabel, NavDropdown, Row} from 'react-bootstrap';
+import { Button, Col, FormLabel, NavDropdown, Row } from 'react-bootstrap';
 import { data } from '../../data.json';
-import {useState } from 'react';
-import FormCheckInput from "react-bootstrap/FormCheckInput";
+import { useState } from 'react';
+import FormCheckInput from 'react-bootstrap/FormCheckInput';
 
 const filters: Filters[] = [
   {
@@ -16,15 +16,15 @@ const filters: Filters[] = [
     label: 'Price',
     items: [
       {
-        text: '600 EUR',
+        text: 600,
         id: 0,
       },
       {
-        text: '1600 EUR',
+        text: 1600,
         id: 1,
       },
       {
-        text: '9600 EUR',
+        text: 9600,
         id: 2,
       },
     ],
@@ -67,7 +67,6 @@ export const Filters = ({ setProducts }) => {
     ram: [],
   });
 
-
   //TODO Refactor to work without bugs, right now it brokes when you select couple options in the same category
   const handleFilters = ({ text }, category) => {
     setCategory((prevState) => {
@@ -78,12 +77,16 @@ export const Filters = ({ setProducts }) => {
           : [...prevState[category], text],
       };
     });
+    updateProducts();
+  };
+
+  const updateProducts = () => {
     let next = [...data];
     next = next
       .filter((prod) => prod.brand.includes(selectedCategory.brand))
       .filter((prod) => prod.price.includes(selectedCategory.price))
       .filter((prod) => prod.ram.includes(selectedCategory.ram));
-    setProducts(next ?? data);
+    setProducts(next);
   };
 
   const resetFilters = () => {
@@ -112,8 +115,8 @@ export const Filters = ({ setProducts }) => {
                     <FormLabel>{item.text}</FormLabel>
                     <FormCheckInput
                       multiple
-                      name={item.text}
-                      onClick={() => handleFilters(item, label.toLowerCase())}
+                      name={item.text as string}
+                      onChange={() => handleFilters(item, label.toLowerCase())}
                     ></FormCheckInput>
                   </div>
                 ))}

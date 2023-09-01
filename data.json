@@ -11,7 +11,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "1600 EUR"
+      "price": "1600"
     },
     {
       "id": "1",
@@ -24,7 +24,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "1600 EUR"
+      "price": "1600"
     },
     {
       "id": "2",
@@ -37,7 +37,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "1600 EUR"
+      "price": "1600"
     },
     {
       "id": "3",
@@ -50,7 +50,7 @@
       "ram": "6 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "600"
     },
     {
       "id": "4",
@@ -63,7 +63,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "1800 EUR"
+      "price": "1800"
     },
     {
       "id": "5",
@@ -76,7 +76,7 @@
       "ram": "6 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "600"
     },
     {
       "id": "6",
@@ -89,7 +89,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/card.png",
-      "price": "600 EUR"
+      "price": "600"
     },
     {
       "id": "7",
@@ -102,7 +102,7 @@
       "ram": "6 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "600 EUR"
+      "price": "600"
     },
     {
       "id": "8",
@@ -115,7 +115,7 @@
       "ram": "6 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "600 EUR"
+      "price": "600"
     },
     {
       "id": "9",
@@ -128,7 +128,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "1600 EUR"
+      "price": "1600"
     },
     {
       "id": "10",
@@ -141,7 +141,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "1000 EUR"
+      "price": "1000"
     },
     {
       "id": "11",
@@ -154,7 +154,7 @@
       "ram": "16 GB",
       "sim": "Single SIM",
       "imageSrc": "src/assets/images/samsung-card.png",
-      "price": "1600 EUR"
+      "price": "1600"
     }
   ]
 }

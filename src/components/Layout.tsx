@@ -11,7 +11,14 @@ import { SortBy } from './SortBy.tsx';
 import { useState } from 'react';
 
 export const Layout = () => {
-  const [products, setProducts] = useState([...data]);
+  const mutatePriceToInt = data.map((i) => {
+    return {
+      ...i,
+      price: Number(i.price),
+    };
+  });
+  const [products, setProducts] = useState(mutatePriceToInt);
+
   return (
     <>
       <Sale />

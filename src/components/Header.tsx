@@ -2,14 +2,13 @@ import { Col, Container, Form, Nav, NavDropdown, Row } from 'react-bootstrap';
 import { data } from '../../data.json';
 
 export const Header = ({ setProducts }) => {
-
   const debounce = (callback, timeout) => {
     let timer: any;
     return (...args: any) => {
       clearTimeout(timer);
-      timer = setTimeout(() => callback(...args), timeout)
-    }
-  }
+      timer = setTimeout(() => callback(...args), timeout);
+    };
+  };
 
   const handleSearch = (event) => {
     const next = [...data];
