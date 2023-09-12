@@ -1,9 +1,10 @@
 import { Button, Col, FormLabel, NavDropdown, Row } from 'react-bootstrap';
 import { data } from '../../data.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FormCheckInput from 'react-bootstrap/FormCheckInput';
+import { Filter, Item } from '../models';
 
-const filters: Filters[] = [
+const filters: Filter[] = [
   {
     label: 'Brand',
     items: [
@@ -69,30 +70,37 @@ export const Filters = ({ setProducts }) => {
 
   //TODO Refactor to work without bugs, right now it brokes when you select couple options in the same category
   const handleFilters = ({ text }, category) => {
-    setCategory((prevState) => {
-      return {
-        ...prevState,
-        [category]: prevState[category].includes(text)
-          ? prevState[category].filter((i) => i !== text)
-          : [...prevState[category], text],
-      };
-    });
-    updateProducts();
-  };
-
-  const updateProducts = () => {
-    let next = [...data];
-    next = next
-      .filter((prod) => prod.brand.includes(selectedCategory.brand))
-      .filter((prod) => prod.price.includes(selectedCategory.price))
-      .filter((prod) => prod.ram.includes(selectedCategory.ram));
-    setProducts(next);
+    setCategory((prevState) => ({
+      ...prevState,
+      [category]: prevState[category].includes(text)
+        ? prevState[category].filter((i) => i !== text)
+        : [...prevState[category], text],
+    }));
   };
 
   const resetFilters = () => {
     setCategory(null);
     setProducts(data);
   };
+
+  useEffect(() => {
+    const categories = (Object.keys(selectedCategory) as (keyof Item)[]).filter(
+      (key) => selectedCategory[key].length !== 0,
+    );
+
+    if (categories.length === 0) {
+      setProducts(data);
+      return;
+    }
+
+    const filtered = data.filter((item: Item) => {
+      for (const cat of categories) {
+        return selectedCategory[cat].includes(item[cat]);
+      }
+    });
+
+    setProducts(filtered);
+  }, [selectedCategory]);
 
   return (
     <Col>

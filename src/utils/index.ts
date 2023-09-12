@@ -6,3 +6,8 @@ export const splitArrayInPieces = (array: Filters[], n: number) => {
   }
   return res;
 };
+
+
+export const capitalize = (str) => {
+  return str[0].toUpperCase() + str.slice(1);
+}
